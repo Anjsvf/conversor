@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+    margin: 20px 0;
+  }
+  
+  /* Estilo para o botão de seleção de arquivo personalizado */
+  .file-label {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .file-label:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo para o botão de conversão com animação de progresso */
+  button#convertButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button#convertButton:hover {
+    background-color: #0056b3;
+  }
+  
+  button#convertButton:after {
+    content: '';
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: width 2s;
+  }
+  
+  button#convertButton:hover:after {
+    width: 100%;
+  }
+  
+  /* Visualização de miniatura do vídeo */
+  .video-thumbnail {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  /* Ícones interativos para o player de áudio */
+  audio {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Mensagem de sucesso */
+  #successMessage {
+    color: #008000;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Indicador de carregamento (spinner) */
+  .loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+    display: none;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Botão de download personalizado com ícone */
+  a#downloadLink {
+    display: none;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  a#downloadLink:hover {
+    background-color: #0056b3;
+  }
+  
+  a#downloadLink:after {
+    content: '\2193'; /* Ícone de seta para baixo */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+  }
+  
+  a#downloadLink:hover:after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  /* Estilo para os controles de áudio */
+  audio {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  audio::-webkit-media-controls-play-button,
+  audio::-webkit-media-controls-pause-button,
+  audio::-webkit-media-controls-volume-slider {
+    display: initial !important;
+  }
+  
