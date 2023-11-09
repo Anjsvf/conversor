@@ -1,4 +1,4 @@
-# Conversor de para áudio 
+# Conversor de Video para áudio 
 [![moodpress](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://conversor-de-video-para-audio.netlify.app/)
 
 conversor de video para Àudio feito em react, com efeitos na parte do Css.
